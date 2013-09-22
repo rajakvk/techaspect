@@ -1,21 +1,8 @@
-(function( TA, undefined ){
-
-	// private property
-	var k=0;
-	function add() {
-
-	}
-	
-	// public property
-	TA.FEATURE = {
-		geolocation: navigator.geolocation ? true : false,
-		audio: !!document.createElement('audio').canPlayType,
-		video: !!document.createElement('video').canPlayType
-	};
-
-}( window.TA = window.TA || {} ));
-
-// dependency: TA, jquery
+/**
+ * Used to detect browser feature
+ * @requires jquery
+ * @requires TA
+ */
 (function( TA, $, undefined ){
 
 	var jqObj = {
@@ -45,7 +32,7 @@
 
 	// prepare structure
 	for(feature in features) {
-		$('<li></li>').addClass("js-"+classes[feature]).appendTo(jqObj.feature);
+		$('<li></li>').addClass("js-"+classes[feature]).html(feature).appendTo(jqObj.feature);
 	}
 
 	// on page load

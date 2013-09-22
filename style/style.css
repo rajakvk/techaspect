@@ -1,0 +1,15 @@
+.feature-deduction li {
+	width: 130px;
+	height: 130px;
+	padding: 20px;
+	list-style: none;
+	font-size:1.2em;
+	text-align: center;
+}
+.feature-deduction li.pass {
+	background-color: green;
+	color: white;
+}
+.feature-deduction li.fail {
+	background-color: red;
+}
